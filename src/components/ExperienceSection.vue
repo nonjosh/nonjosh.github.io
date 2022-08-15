@@ -65,8 +65,8 @@
         <h2>Operating Model Master for Hong Kong</h2>
         <v-card-text>
           Reference:
-          <a href="https://www.idc.com/getdoc.jsp?containerId=prAP45491619"
-            >https://www.idc.com/getdoc.jsp?containerId=prAP45491619</a
+          <a href="https://whatsnew.hunghingprinting.com/hung-hing-wins-idc-digital-transformation-award-two-years-in-a-row/"
+            >https://whatsnew.hunghingprinting.com/hung-hing-wins-idc-digital-transformation-award-two-years-in-a-row/</a
           >
         </v-card-text>
       </v-card>

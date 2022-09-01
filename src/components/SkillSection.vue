@@ -1,32 +1,22 @@
 <template>
-  <!-- TODO Skill section -->
-  <v-row class="no-gutters skill-section align-center">
-    <v-col class="fill-height d-none d-lg-block" cols="6">
-      <ParallaxImg :localImgPath="localImgPath" />
-    </v-col>
-    <v-col class="fill-height" col="6">
-      <SkillTreeCard />
-    </v-col>
-  </v-row>
+  <v-card class="skill-section pt-10">
+    <SkillTreeCard />
+  </v-card>
 </template>
 
 <script>
-import ParallaxImg from "@/components/ParallaxImg";
 import SkillTreeCard from "@/components/SkillTreeCard";
 
 export default {
   name: "SkillSection",
 
-  components: { ParallaxImg, SkillTreeCard },
-
-  data: () => ({
-    localImgPath: require("@/assets/img/leaf_bg.jpg"),
-  }),
+  components: { SkillTreeCard },
 };
 </script>
 
 <style scoped>
 .skill-section {
-  height: 102vh;
+  height: 100vh;
+  overflow-y: scroll;
 }
 </style>

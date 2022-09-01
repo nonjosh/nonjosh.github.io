@@ -1,15 +1,15 @@
 <template>
   <!-- TODO Showcase section-->
-  <v-card outlined class="showcase-section">
-    <center><h1 class="my-5"><u>My Personal Projects</u></h1></center>
+  <v-card outlined class="pt-5 showcase-section">
+    <center><h1 class="py-10"><u>My Personal Projects</u></h1></center>
     <v-row>
       <v-col cols="12" lg="6">
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/acgn-bot_screenshot.png')"
-            class="my-3"
+            class="pa-10"
             max-height="50vh"
-            max-width="25vw"
+            max-width="500px"
           />
           <v-card-title>ACGN bot</v-card-title>
           <v-card-text>
@@ -25,7 +25,8 @@
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/dnd-data_screenshot.png')"
-            class="my-3"
+            class="ma-5"
+            aspect-ratio="1.7"
           />
           <v-card-title>DnD database</v-card-title>
           <v-card-text>
@@ -43,7 +44,8 @@
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/dnd-online_screenshot.png')"
-            class="my-3"
+            class="ma-5"
+            aspect-ratio="1.7"
           />
           <v-card-title>DnD Online (In Progress)</v-card-title>
           <v-card-text>
@@ -58,7 +60,8 @@
         <v-card outlined>
           <v-img
             src="https://www.highcharts.com/demo/images/samples/stock/demo/stock-tools-gui/thumbnail.png"
-            class="my-3"
+            class="ma-5"
+            aspect-ratio="1.7"
           />
           <v-card-title>Trading bot (In Progress)</v-card-title>
           <v-card-text>

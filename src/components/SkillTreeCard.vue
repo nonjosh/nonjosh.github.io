@@ -18,7 +18,7 @@
         label="Case sensitive search"
       ></v-checkbox>
     </v-sheet>
-    <v-card-text>
+    <v-card-text class="text-left">
       <v-treeview
         :items="items"
         :search="search"
@@ -128,7 +128,7 @@ export default {
           {
             id: 42,
             name: "MinIO",
-          }
+          },
         ],
       },
       {

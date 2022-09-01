@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar dense fixed outlined color="transparent">
+    <v-app-bar dense fixed color="transparent">
       <v-spacer></v-spacer>
       <!-- buttons for Desktop -->
       <v-btn
@@ -34,40 +34,60 @@
       </v-menu>
     </v-app-bar>
     <v-main>
-      <LaunchSection id="launch" />
-      <!-- <SkillSection id="skill-section" /> -->
-      <ExperienceSection id="exp-section" />
+      <v-row class="no-gutters">
+        <v-col col="6"><AboutSection id="about-section" /></v-col>
+        <v-col col="6"><SkillSection id="skill-section" /></v-col>
+      </v-row>
+      <v-row class="no-gutters experience-section" id="exp-section">
+        <v-col cols="12" lg="9">
+          <ExperienceSection id="experience-section" />
+        </v-col>
+        <v-col lg="3" class="d-none d-lg-block">
+          <ParallaxImg
+            :localImgPath="bgImg.localImgPath"
+            :bgPosition="bgImg.bgPosition"
+          />
+        </v-col>
+      </v-row>
       <ShowcaseSection id="showcase-section" />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import LaunchSection from "@/components/LaunchSection.vue";
-// import SkillSection from "@/components/SkillSection.vue";
+import AboutSection from "@/components/AboutSection.vue";
+import SkillSection from "@/components/SkillSection.vue";
 import ExperienceSection from "@/components/ExperienceSection.vue";
+import ParallaxImg from "@/components/ParallaxImg";
 import ShowcaseSection from "@/components/ShowcaseSection.vue";
 
 export default {
   name: "App",
 
   components: {
-    LaunchSection,
-    // SkillSection,
+    AboutSection,
+    SkillSection,
     ExperienceSection,
+    ParallaxImg,
     ShowcaseSection,
   },
 
   data: () => ({
     title: "Temp Title",
-    // navBarbgImgLocalPath: require("@/assets/sky_bg.jpg"),
+
     items: [
-      { title: "TOP", section_id: "launch" },
+      { title: "TOP", section_id: "about-section" },
       // { title: "Skills", section_id: "skill-section" },
       { title: "Experiences", section_id: "exp-section" },
+      { title: "Awards", section_id: "awards-section" },
       { title: "Showcases", section_id: "showcase-section" },
       // { title: "Origami" },
     ],
+
+    bgImg: {
+      localImgPath: require("@/assets/img/walkway_bg.jpg"),
+      bgPosition: "40vw",
+    },
   }),
 
   methods: {

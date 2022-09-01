@@ -1,5 +1,5 @@
 <template>
-  <v-card class="fill-height parallax-bg" :style="cssProps"></v-card>
+  <v-card class="parallax-bg" :style="cssProps"></v-card>
 </template>
 
 <script>
@@ -40,5 +40,7 @@ export default {
   background-position: var(--background-position);
   background-repeat: no-repeat;
   background-size: cover;
+
+  height: 100%;
 }
 </style>

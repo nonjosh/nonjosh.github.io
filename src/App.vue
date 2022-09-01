@@ -79,3 +79,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.v-sheet.v-toolbar {
+  box-shadow: none !important;
+}
+</style>

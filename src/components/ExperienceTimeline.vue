@@ -49,7 +49,7 @@ export default {
     items: [
       {
         id: 0,
-        color: "grey",
+        color: "green",
         icon: "mdi-school",
         title: "BSc in Physics",
         period: "2012/9 - 2015/8",

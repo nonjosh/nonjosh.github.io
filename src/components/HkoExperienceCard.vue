@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined variant="outlined" class="text-left">
+  <v-card outlined variant="outlined" class="text-left blue-card">
     <v-card-title :class="`font-weight-bold ${item.color}--text`">
       Analyst Programmer (T-Contract)
     </v-card-title>
@@ -41,6 +41,20 @@
           </li>
         </ul>
       </p>
+      <p>
+        <v-chip class="ma-1" color="primary">AI</v-chip>
+        <v-chip class="ma-1" color="primary">image classification</v-chip>
+        <v-chip class="ma-1" color="primary">image segmentation</v-chip>
+      </p>
+
+      <p>
+        <v-chip class="ma-1" color="primary">Python</v-chip>
+        <v-chip class="ma-1" color="primary">VueJS</v-chip>
+        <v-chip class="ma-1" color="secondary">Ansible</v-chip>
+        <v-chip class="ma-1" color="secondary">Golang</v-chip>
+        <v-chip class="ma-1" color="secondary">MinIO</v-chip>
+      </p>
+
 
       <span class="font-weight-bold">Highlighted Projects</span>
       
@@ -98,3 +112,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.blue-card.v-sheet.v-card {
+  border: thin solid blue;
+}
+</style>

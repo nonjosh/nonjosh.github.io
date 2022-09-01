@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined variant="outlined" class="text-left">
+  <v-card outlined variant="outlined" class="text-left red-card">
     <v-card-title :class="`font-weight-bold ${item.color}--text`">
       Junior Developer
     </v-card-title>
@@ -43,6 +43,24 @@
           </li>
         </ul>
       </p>
+
+      <p>
+        <v-chip color="warning">2019 HKICT Gold Award</v-chip>
+      </p>
+  
+      <p>
+        <v-chip class="ma-1" color="primary">Andoid</v-chip>
+        <v-chip class="ma-1" color="secondary">iOS</v-chip>
+        <v-chip class="ma-1" color="secondary">Websites</v-chip>
+      </p>
+
+      <p>
+        <v-chip class="ma-1" color="primary">Java</v-chip>
+        <v-chip class="ma-1" color="secondary">PHP</v-chip>
+        <v-chip class="ma-1" color="secondary">Objective-C</v-chip>
+        <v-chip class="ma-1" color="primary">Oracle Database</v-chip>
+      </p>
+
       <!-- TODO add highlighed projects -->
       <span class="font-weight-bold">Highlighted Projects</span>
       <v-expansion-panels focusable>
@@ -51,7 +69,8 @@
             Industrial Revolution 4.0 - IoT implementation in factory machines
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <p>initiating the concept of Industry 4.0 in the company<br><span style="color:red">*2019 Hong Kong ICT Awards: Smart Business - Gold Award</span></p>
+            <v-chip class="ma-1" color="warning">2019 Hong Kong ICT Awards: Smart Business - Gold Award</v-chip>
+            <p>initiating the concept of Industry 4.0 in the company</p>
             <ul>
               <li>Introduced Machine Operator Console App for over hundreds of factory machines to replace paper-based process, record real-time production data and analysis data for improving OEE (Overall Equipment Effectiveness).</li>
               <li>Developed IoT program, Tablet App (Android) and monitoring page (for TV screens) in multi-factories in HK and mainland China.</li>
@@ -117,3 +136,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.red-card.v-sheet.v-card {
+  border: thin solid red;
+}
+</style>

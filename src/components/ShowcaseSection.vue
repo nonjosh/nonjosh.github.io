@@ -3,7 +3,7 @@
   <v-card outlined class="showcase-section">
     <center><h1 class="my-5"><u>My Personal Projects</u></h1></center>
     <v-row>
-      <v-col cols="6">
+      <v-col cols="12" lg="6">
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/acgn-bot_screenshot.png')"
@@ -21,7 +21,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" lg="6">
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/dnd-data_screenshot.png')"
@@ -39,7 +39,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="6">
+      <v-col cols="12" lg="6">
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/dnd-online_screenshot.png')"
@@ -54,7 +54,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" lg="6">
         <v-card outlined>
           <v-img
             src="https://www.highcharts.com/demo/images/samples/stock/demo/stock-tools-gui/thumbnail.png"

@@ -7,10 +7,7 @@
           {{ awardItem.title }}
         </h2>
         <span v-if="awardItem.reference" class="my-10">
-          Reference:
-          <a :href="awardItem.Reference" target="_blank">{{
-            awardItem.reference
-          }}</a>
+          <a :href="awardItem.Reference" target="_blank">Reference</a>
           <font v-if="awardItem.page"> (P. {{ awardItem.page }})</font>
         </span>
       </v-card-text>

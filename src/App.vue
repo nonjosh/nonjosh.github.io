@@ -6,7 +6,7 @@
       <v-btn
         text
         class="d-none d-md-block"
-        v-for="item in items"
+        v-for="item in desktopNavList"
         :key="item.section_id"
         @click="scroll(item.section_id)"
         >{{ item.title }}</v-btn
@@ -22,7 +22,7 @@
         </template>
         <v-list>
           <v-list-item
-            v-for="(item, index) in items"
+            v-for="(item, index) in navList"
             :key="index"
             :value="index"
           >
@@ -75,9 +75,9 @@ export default {
   data: () => ({
     title: "Temp Title",
 
-    items: [
+    navList: [
       { title: "TOP", section_id: "about-section" },
-      // { title: "Skills", section_id: "skill-section" },
+      { title: "Skills", section_id: "skill-section" },
       { title: "Experiences", section_id: "exp-section" },
       { title: "Awards", section_id: "awards-section" },
       { title: "Showcases", section_id: "showcase-section" },
@@ -95,6 +95,12 @@ export default {
       document.getElementById(id).scrollIntoView({
         behavior: "smooth",
       });
+    },
+  },
+
+  computed: {
+    desktopNavList() {
+      return this.navList.filter((item) => item.title !== "Skills");
     },
   },
 };

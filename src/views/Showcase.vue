@@ -6,14 +6,14 @@
     </center>
     <v-row>
       <v-col cols="12" lg="6">
-        <v-card outlined>
+        <v-card outlined @click="showPreview(items[0].imgSrc)">
           <v-img
-            :src="require('@/assets/img/acgn-bot_screenshot.png')"
+            :src="items[0].imgSrc"
             class="ma-5 d-none d-md-block"
             max-height="50vh"
             max-width="500px"
           />
-          <v-card-title>ACGN bot</v-card-title>
+          <v-card-title> {{items[0].title }} </v-card-title>
           <v-card-text>
             <p>This is a bot that I made for subscribing updates in ACGN.</p>
             <p>
@@ -24,13 +24,13 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="6">
-        <v-card outlined>
+        <v-card outlined @click="showPreview(items[1].imgSrc)">
           <v-img
-            :src="require('@/assets/img/dnd-data_screenshot.png')"
+            :src="items[1].imgSrc"
             class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
-          <v-card-title>DnD database</v-card-title>
+          <v-card-title> {{items[1].title }} </v-card-title>
           <v-card-text>
             <p>
               This is a webpage that I made for searching the board game (Dragon
@@ -43,13 +43,13 @@
     </v-row>
     <v-row>
       <v-col cols="12" lg="6">
-        <v-card outlined>
+        <v-card outlined @click="showPreview(items[2].imgSrc)">
           <v-img
-            :src="require('@/assets/img/dnd-online_screenshot.png')"
+            :src="items[2].imgSrc"
             class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
-          <v-card-title>DnD Online (In Progress)</v-card-title>
+          <v-card-title> {{items[2].title }} </v-card-title>
           <v-card-text>
             <p>
               This is a webpage that I made for playing the board game (Dragon
@@ -63,13 +63,13 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="6">
-        <v-card outlined>
+        <v-card outlined @click="showPreview(items[3].imgSrc)">
           <v-img
-            src="https://www.highcharts.com/demo/images/samples/stock/demo/stock-tools-gui/thumbnail.png"
+            :src="items[3].imgSrc"
             class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
-          <v-card-title>Trading bot (In Progress)</v-card-title>
+          <v-card-title> {{items[3].title }} </v-card-title>
           <v-card-text>
             <p>
               This is a bot that I made for trading stocks and crypto
@@ -78,6 +78,14 @@
           </v-card-text>
         </v-card>
       </v-col>
+
+      <v-overlay :z-index="zIndex" :value="overlay">
+        <v-img
+          :src="previewImgSrc"
+          max-width="100vw"
+          @click="overlay = false"
+        />
+      </v-overlay>
     </v-row>
   </v-card>
 </template>
@@ -86,7 +94,49 @@
 export default {
   name: "ShowcaseSection",
 
-  data: () => ({}),
+  data: () => ({
+    overlay: false,
+    zIndex: 0,
+    previewImgSrc: "",
+    items: [
+      {
+        id: 0,
+        title: "ACGN bot",
+        description:
+          "This is a bot that I made for subscribing updates in ACGN.",
+        imgSrc: require("@/assets/img/acgn-bot_screenshot.png"),
+      },
+      {
+        id: 1,
+        title: "DnD database",
+        description:
+          "This is a webpage that I made for searching the board game (Dragon and Dungeon 4.0) rules and other information.",
+        imgSrc: require("@/assets/img/dnd-data_screenshot.png"),
+      },
+      {
+        id: 2,
+        title: "DnD Online (In Progress)",
+        description:
+          "This is a webpage that I made for playing the board game (Dragon and Dungeon 4.0) with friends.",
+        imgSrc: require("@/assets/img/dnd-online_screenshot.png"),
+      },
+      {
+        id: 3,
+        title: "Trading bot (In Progress)",
+        description:
+          "This is a bot that I made for trading stocks and crypto currencies.",
+        imgSrc:
+          "https://www.highcharts.com/demo/images/samples/stock/demo/stock-tools-gui/thumbnail.png",
+      },
+    ],
+  }),
+
+  methods: {
+    showPreview(imgSrc) {
+      this.previewImgSrc = imgSrc;
+      this.overlay = true;
+    },
+  },
 };
 </script>
 

@@ -8,7 +8,7 @@
         class="d-none d-md-block"
         v-for="item in desktopNavList"
         :key="item.section_id"
-        @click="scroll(item.section_id)"
+        @click="scrollSection(item.section_id)"
         >{{ item.title }}</v-btn
       >
       <!-- button for Mobiles -->
@@ -26,9 +26,9 @@
             :key="index"
             :value="index"
           >
-            <v-list-item-title @click="scroll(item.section_id)">{{
-              item.title
-            }}</v-list-item-title>
+            <v-list-item-title @click="scrollSection(item.section_id)">
+              {{ item.title }}
+            </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -51,6 +51,10 @@
       </v-row>
       <ShowcaseSection id="showcase-section" />
     </v-main>
+    <v-btn elevation="2" fab fixed right bottom @click="fabScrollNext()">
+      <v-icon v-if="nextSectionIndex == 0">mdi-arrow-up</v-icon>
+      <v-icon v-else>mdi-arrow-down</v-icon>
+    </v-btn>
   </v-app>
 </template>
 
@@ -73,8 +77,6 @@ export default {
   },
 
   data: () => ({
-    title: "Temp Title",
-
     navList: [
       { title: "TOP", section_id: "about-section" },
       { title: "Skills", section_id: "skill-section" },
@@ -83,18 +85,27 @@ export default {
       { title: "Showcases", section_id: "showcase-section" },
       // { title: "Origami" },
     ],
-
     bgImg: {
       localImgPath: require("@/assets/img/walkway_bg.jpg"),
       bgPosition: "40vw",
     },
+    currentScroll: 0,
   }),
 
   methods: {
-    scroll(id) {
+    onScroll() {
+      // Update currentScroll on scroll
+      this.currentScroll = window.top.scrollY;
+    },
+    scrollSection(id) {
+      // Scroll to section by id
       document.getElementById(id).scrollIntoView({
         behavior: "smooth",
       });
+    },
+    fabScrollNext() {
+      // Scroll to next section
+      this.scrollSection(this.nextSectionId);
     },
   },
 
@@ -102,6 +113,49 @@ export default {
     desktopNavList() {
       return this.navList.filter((item) => item.title !== "Skills");
     },
+    sectionPositionList() {
+      // 0,0,995,1658,2975
+      return this.navList.map((item) => {
+        return document.getElementById(item.section_id).offsetTop;
+      });
+    },
+    currentSectionId() {
+      // Get current section id
+      return this.navList.find((item, index) => {
+        // Return last section if index is last
+        if (index === this.navList.length - 1) {
+          return true;
+        }
+        // Return section if currentScroll is between section positions
+        return (
+          this.currentScroll >=
+            document.getElementById(item.section_id).offsetTop &&
+          this.currentScroll <
+            document.getElementById(this.navList[index + 1].section_id)
+              .offsetTop
+        );
+      }).section_id;
+    },
+    currentSectionIndex() {
+      // Get current section index
+      return this.navList.findIndex((item) => {
+        return item.section_id === this.currentSectionId;
+      });
+    },
+    nextSectionIndex() {
+      // Get next section index
+      // If reach last section, scroll to top
+      return this.currentSectionIndex === this.navList.length - 1
+        ? 0
+        : this.currentSectionIndex + 1;
+    },
+    nextSectionId() {
+      // Get next section id
+      return this.navList[this.nextSectionIndex].section_id;
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
   },
 };
 </script>

@@ -168,6 +168,9 @@ export default {
     window.addEventListener("scroll", this.onScroll);
     this.ready = true
   },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
 };
 </script>
 

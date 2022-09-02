@@ -51,7 +51,15 @@
       </v-row>
       <ShowcaseSection id="showcase-section" />
     </v-main>
-    <v-btn elevation="2" fab fixed right bottom @click="fabScrollNext()">
+    <v-btn
+      elevation="2"
+      fab
+      fixed
+      right
+      bottom
+      color="primary"
+      @click="fabScrollNext()"
+    >
       <v-icon v-if="nextSectionIndex == 0">mdi-arrow-up</v-icon>
       <v-icon v-else>mdi-arrow-down</v-icon>
     </v-btn>

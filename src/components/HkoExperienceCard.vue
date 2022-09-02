@@ -1,20 +1,19 @@
 <template>
   <v-card outlined variant="outlined" class="text-left blue-card">
+    <!-- Display period for mobile devices -->
     <v-card-title :class="`font-weight-bold ${item.color}--text`">
-      Analyst Programmer (T-Contract)
-    </v-card-title>
-
-    <v-card-subtitle class="font-weight-bold">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <span v-bind="attrs" v-on="on">
-            Hong Kong Observatory / Tsum Sha Tsui, Hong Kong
+            <v-icon left class="d-lg-none">{{item.icon}}</v-icon>{{ item.location }}
           </span>
         </template>
-        The Hong Kong Observatory is a weather forecast agency of the government
-        of Hong Kong. The Observatory forecasts the weather and issues warnings
-        on weather-related hazards.
+        {{ item.locationTooltip }}
       </v-tooltip>
+    </v-card-title>
+
+    <v-card-subtitle class="font-weight-bold">
+      {{ item.title}} <span class="d-lg-none">({{ item.period }})</span>
     </v-card-subtitle>
 
     <v-card-text>
@@ -57,7 +56,7 @@
 
 
       <span class="font-weight-bold">Highlighted Projects</span>
-      
+
       <v-expansion-panels focusable>
         <v-expansion-panel>
           <v-expansion-panel-header>Smart Weather Analytics Platform</v-expansion-panel-header>
@@ -108,6 +107,12 @@ export default {
   data: () => ({
     item: {
       color: "blue",
+      icon: "mdi-briefcase",
+      period: "2019/10 - 2022/2",
+      title: "Analyst Programmer (T-Contract)",
+      location: "Hong Kong Observatory",
+      locationTooltip:
+        "The Hong Kong Observatory is a weather forecast agency of the government of Hong Kong. The Observatory forecasts the weather and issues warnings on weather-related hazards.",
     },
   }),
 };

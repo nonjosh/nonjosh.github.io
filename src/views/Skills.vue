@@ -8,7 +8,7 @@
 import SkillTreeCard from "@/components/SkillTreeCard";
 
 export default {
-  name: "SkillSection",
+  name: "SkillsSection",
 
   components: { SkillTreeCard },
 };

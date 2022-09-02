@@ -2,9 +2,9 @@
   <v-card class="pa-10" outlined>
     <h1 class="text-center font-weight-bold yellow--text"><u>Awards</u></h1>
     <v-card v-for="awardItem in awards" :key="awardItem.id">
-      <v-card-text>
-        <h2 class="mt-5 yellow--text">
-          {{ awardItem.title }}
+      <v-card-text class="ma-5">
+        <h2 class="yellow--text">
+          <v-icon left>mdi-medal</v-icon>{{ awardItem.title }}
         </h2>
         <span v-if="awardItem.reference" class="my-10">
           <a :href="awardItem.Reference" target="_blank">Reference</a>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "AwardsCard",
+  name: "AwardsSection",
   data: () => ({
     awards: [
       {

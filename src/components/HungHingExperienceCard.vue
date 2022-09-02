@@ -1,19 +1,19 @@
 <template>
   <v-card outlined variant="outlined" class="text-left red-card">
+    <!-- Display period for mobile devices -->
     <v-card-title :class="`font-weight-bold ${item.color}--text`">
-      Junior Developer
-    </v-card-title>
-
-    <v-card-subtitle class="font-weight-bold">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <span v-bind="attrs" v-on="on">
-            Hung Hing Off-Set Printing Group Limited / Tai Po, Hong Kong
+            <v-icon left class="d-lg-none">{{item.icon}}</v-icon>{{ item.location }}
           </span>
         </template>
-        60+ years Printing and Manufacture Local Company listed on the Hong Kong
-        Stock Exchange (SEHK: 450)
+        {{ item.locationTooltip }}
       </v-tooltip>
+    </v-card-title>
+
+    <v-card-subtitle class="font-weight-bold">
+      {{ item.title}} <span class="d-lg-none">({{ item.period }})</span>
     </v-card-subtitle>
 
     <v-card-text>
@@ -47,7 +47,7 @@
       <p>
         <v-chip color="warning">2019 HKICT Gold Award</v-chip>
       </p>
-  
+
       <p>
         <v-chip class="ma-1" color="primary">Andoid</v-chip>
         <v-chip class="ma-1" color="secondary">iOS</v-chip>
@@ -81,7 +81,7 @@
             </ul>
           </v-expansion-panel-content>
         </v-expansion-panel>
-        
+
         <v-expansion-panel>
           <v-expansion-panel-header>Picking List Mobile App</v-expansion-panel-header>
           <v-expansion-panel-content>
@@ -132,6 +132,12 @@ export default {
   data: () => ({
     item: {
       color: "red",
+      icon: "mdi-briefcase",
+      title: "Junior Developer",
+      period: "2016/3 - 2019/9",
+      location: "Hung Hing Off-Set Printing Group Limited",
+      locationTooltip:
+        "60+ years Printing and Manufacture Local Company listed on the Hong Kong Stock Exchange (SEHK: 450)",
     },
   }),
 };

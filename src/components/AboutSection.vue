@@ -17,7 +17,7 @@
       <div class="text-h3 text-md-h2 font-weight-bold">
         Hi, I am Johnson, a full stack developer.
       </div>
-      <v-avatar class="profile" size="300">
+      <v-avatar class="profile d-none d-md-block mx-auto" size="300">
         <v-img :src="profileImgLocalPath"></v-img>
       </v-avatar>
       <p class="text-h4 my-10">

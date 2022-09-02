@@ -13,7 +13,7 @@
             max-height="50vh"
             max-width="500px"
           />
-          <v-card-title> {{items[0].title }} </v-card-title>
+          <v-card-title> {{ items[0].title }} </v-card-title>
           <v-card-text>
             <p>This is a bot that I made for subscribing updates in ACGN.</p>
             <p>
@@ -30,7 +30,7 @@
             class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
-          <v-card-title> {{items[1].title }} </v-card-title>
+          <v-card-title> {{ items[1].title }} </v-card-title>
           <v-card-text>
             <p>
               This is a webpage that I made for searching the board game (Dragon
@@ -49,7 +49,7 @@
             class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
-          <v-card-title> {{items[2].title }} </v-card-title>
+          <v-card-title> {{ items[2].title }} </v-card-title>
           <v-card-text>
             <p>
               This is a webpage that I made for playing the board game (Dragon
@@ -69,7 +69,7 @@
             class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
-          <v-card-title> {{items[3].title }} </v-card-title>
+          <v-card-title> {{ items[3].title }} </v-card-title>
           <v-card-text>
             <p>
               This is a bot that I made for trading stocks and crypto
@@ -81,7 +81,9 @@
 
       <v-overlay :z-index="zIndex" :value="overlay">
         <v-img
+          contain
           :src="previewImgSrc"
+          max-height="100vh"
           max-width="100vw"
           @click="overlay = false"
         />
@@ -96,7 +98,7 @@ export default {
 
   data: () => ({
     overlay: false,
-    zIndex: 0,
+    zIndex: 1,
     previewImgSrc: "",
     items: [
       {

@@ -1,11 +1,13 @@
 <template>
   <v-card outlined variant="outlined" class="text-left">
+    <!-- Display period for mobile devices -->
     <v-card-title :class="`font-weight-bold ${item.color}--text`">
-      {{ item.title }}
+      <v-icon left class="d-lg-none">{{ item.icon }}</v-icon
+      >{{ item.location }}
     </v-card-title>
 
     <v-card-subtitle class="font-weight-bold">
-      {{ item.location }}
+      {{ item.title }} <span class="d-lg-none">({{ item.period }})</span>
     </v-card-subtitle>
 
     <v-card-text>
@@ -25,8 +27,8 @@ export default {
     item: {
       color: "green",
       icon: "mdi-school",
-      title: "BSc in Physics",
       period: "2012/9 - 2015/8",
+      title: "BSc in Physics",
       location: "The Chinese University of Hong Kong",
     },
   }),

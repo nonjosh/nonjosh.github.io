@@ -52,6 +52,7 @@
       <ShowcaseSection id="showcase-section" />
     </v-main>
     <v-btn
+      v-if="ready"
       elevation="2"
       fab
       fixed
@@ -98,6 +99,7 @@ export default {
       bgPosition: "40vw",
     },
     currentScroll: 0,
+    ready: false
   }),
 
   methods: {
@@ -164,6 +166,7 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
+    this.ready = true
   },
 };
 </script>

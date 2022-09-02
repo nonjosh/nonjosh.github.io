@@ -4,7 +4,7 @@
     <v-card v-for="awardItem in awards" :key="awardItem.id">
       <v-card-text>
         <h2 class="mt-5 yellow--text">
-          {{ awardItem.title }}
+          <v-icon left>mdi-medal</v-icon>{{ awardItem.title }}
         </h2>
         <span v-if="awardItem.reference" class="my-10">
           <a :href="awardItem.Reference" target="_blank">Reference</a>

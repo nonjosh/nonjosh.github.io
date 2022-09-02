@@ -38,7 +38,7 @@
         <v-col col="6"><AboutSection id="about-section" /></v-col>
         <v-col col="6"><SkillsSection id="skill-section" /></v-col>
       </v-row>
-      <v-row class="no-gutters experience-section">
+      <v-row class="no-gutters">
         <v-col cols="12" lg="9">
           <v-card class="text-center fill-height">
             <ExperiencesSection id="experience-section" />

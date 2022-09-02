@@ -61,7 +61,6 @@
         <v-chip class="ma-1" color="primary">Oracle Database</v-chip>
       </p>
 
-      <!-- TODO add highlighed projects -->
       <span class="font-weight-bold">Highlighted Projects</span>
       <v-expansion-panels focusable>
         <v-expansion-panel>

@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO Showcase section-->
   <v-card outlined class="pt-5 showcase-section">
     <center>
       <h1 class="py-10"><u>My Personal Projects</u></h1>

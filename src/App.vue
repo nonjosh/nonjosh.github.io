@@ -36,11 +36,12 @@
     <v-main>
       <v-row class="no-gutters">
         <v-col col="6"><AboutSection id="about-section" /></v-col>
-        <v-col col="6"><SkillSection id="skill-section" /></v-col>
+        <v-col col="6"><SkillsSection id="skill-section" /></v-col>
       </v-row>
-      <v-row class="no-gutters experience-section" id="exp-section">
+      <v-row class="no-gutters">
         <v-col cols="12" lg="9">
-          <ExperienceSection id="experience-section" />
+          <ExperiencesSection id="experience-section" />
+          <AwardsSection id="awards-section" />
         </v-col>
         <v-col lg="3" class="d-none d-lg-block">
           <ParallaxImg
@@ -68,28 +69,30 @@
 </template>
 
 <script>
-import AboutSection from "@/components/AboutSection.vue";
-import SkillSection from "@/components/SkillSection.vue";
-import ExperienceSection from "@/components/ExperienceSection.vue";
+import AboutSection from "@/views/About.vue";
+import SkillsSection from "@/views/Skills.vue";
+import ExperiencesSection from "@/views/Experiences.vue";
+import ShowcaseSection from "@/views/Showcase.vue";
+import AwardsSection from "@/views/Awards.vue";
 import ParallaxImg from "@/components/ParallaxImg";
-import ShowcaseSection from "@/components/ShowcaseSection.vue";
 
 export default {
   name: "App",
 
   components: {
     AboutSection,
-    SkillSection,
-    ExperienceSection,
-    ParallaxImg,
+    SkillsSection,
+    ExperiencesSection,
+    AwardsSection,
     ShowcaseSection,
+    ParallaxImg,
   },
 
   data: () => ({
     navList: [
       { title: "TOP", section_id: "about-section" },
       { title: "Skills", section_id: "skill-section" },
-      { title: "Experiences", section_id: "exp-section" },
+      { title: "Experiences", section_id: "experience-section" },
       { title: "Awards", section_id: "awards-section" },
       { title: "Showcases", section_id: "showcase-section" },
       // { title: "Origami" },
@@ -99,7 +102,7 @@ export default {
       bgPosition: "40vw",
     },
     currentScroll: 0,
-    ready: false
+    ready: false,
   }),
 
   methods: {
@@ -166,7 +169,7 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
-    this.ready = true
+    this.ready = true;
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);

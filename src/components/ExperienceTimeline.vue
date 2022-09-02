@@ -15,22 +15,7 @@
       </template>
 
       <!-- Display job/school content -->
-      <v-card v-if="item.id == 0" outlined variant="outlined" class="text-left">
-        <v-card-title :class="`font-weight-bold ${item.color}--text`">
-          {{ item.title }}
-        </v-card-title>
-
-        <v-card-subtitle class="font-weight-bold">
-          {{ item.location }}
-        </v-card-subtitle>
-
-        <v-card-text>
-          <!-- Display job description -->
-          <p v-if="item.description" class="my-10">
-            {{ item.description }}
-          </p>
-        </v-card-text>
-      </v-card>
+      <CuhkExperienceCard v-if="item.id == 0" />
       <HungHingExperienceCard v-if="item.id == 1" />
       <HkoExperienceCard v-if="item.id == 2" />
     </v-timeline-item>
@@ -38,13 +23,14 @@
 </template>
 
 <script>
+import CuhkExperienceCard from "@/components/CuhkExperienceCard.vue";
 import HungHingExperienceCard from "@/components/HungHingExperienceCard";
 import HkoExperienceCard from "@/components/HkoExperienceCard";
 
 export default {
   name: "ExperienceTimeline",
-  
-  components: {  HungHingExperienceCard, HkoExperienceCard },
+
+  components: { CuhkExperienceCard, HungHingExperienceCard, HkoExperienceCard },
   data: () => ({
     items: [
       {
@@ -79,8 +65,6 @@ export default {
       },
     ],
   }),
-
-
 };
 </script>
 

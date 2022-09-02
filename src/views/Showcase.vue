@@ -1,13 +1,15 @@
 <template>
   <!-- TODO Showcase section-->
   <v-card outlined class="pt-5 showcase-section">
-    <center><h1 class="py-10"><u>My Personal Projects</u></h1></center>
+    <center>
+      <h1 class="py-10"><u>My Personal Projects</u></h1>
+    </center>
     <v-row>
       <v-col cols="12" lg="6">
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/acgn-bot_screenshot.png')"
-            class="pa-10"
+            class="ma-5 d-none d-md-block"
             max-height="50vh"
             max-width="500px"
           />
@@ -25,14 +27,14 @@
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/dnd-data_screenshot.png')"
-            class="ma-5"
+            class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
           <v-card-title>DnD database</v-card-title>
           <v-card-text>
             <p>
-              This is a webpage that I made for searching the board game (Dragon and Dungeon 4.0) rules and
-              other information.
+              This is a webpage that I made for searching the board game (Dragon
+              and Dungeon 4.0) rules and other information.
             </p>
             <p>Simple sorting and filtering functions are implemented.</p>
           </v-card-text>
@@ -44,15 +46,19 @@
         <v-card outlined>
           <v-img
             :src="require('@/assets/img/dnd-online_screenshot.png')"
-            class="ma-5"
+            class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
           <v-card-title>DnD Online (In Progress)</v-card-title>
           <v-card-text>
             <p>
-              This is a webpage that I made for playing the board game (Dragon and Dungeon 4.0) with friends.
+              This is a webpage that I made for playing the board game (Dragon
+              and Dungeon 4.0) with friends.
             </p>
-            <p>Different users (4 of us) can share the same game section and combat information together in real time</p>
+            <p>
+              Different users (4 of us) can share the same game section and
+              combat information together in real time
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
@@ -60,7 +66,7 @@
         <v-card outlined>
           <v-img
             src="https://www.highcharts.com/demo/images/samples/stock/demo/stock-tools-gui/thumbnail.png"
-            class="ma-5"
+            class="ma-5 d-none d-md-block"
             aspect-ratio="1.7"
           />
           <v-card-title>Trading bot (In Progress)</v-card-title>

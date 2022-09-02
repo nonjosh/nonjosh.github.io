@@ -40,10 +40,8 @@
       </v-row>
       <v-row class="no-gutters">
         <v-col cols="12" lg="9">
-          <v-card class="text-center fill-height">
-            <ExperiencesSection id="experience-section" />
-            <AwardsSection id="awards-section" />
-          </v-card>
+          <ExperiencesSection id="experience-section" />
+          <AwardsSection id="awards-section" />
         </v-col>
         <v-col lg="3" class="d-none d-lg-block">
           <ParallaxImg

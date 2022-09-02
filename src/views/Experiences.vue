@@ -1,5 +1,5 @@
 <template>
-  <v-card class="text-center fill-height">
+  <v-card class="text-center" outlined>
     <h1 class="pa-10"><u>My Experiences</u></h1>
 
     <!-- Show Experience Timeline for desktop/tablet devices only -->
@@ -8,9 +8,6 @@
     <HkoExperienceCard class="d-md-none" />
     <HungHingExperienceCard class="d-md-none" />
     <CuhkExperienceCard class="d-md-none" />
-
-    <!-- Awards Card -->
-    <AwardsCard id="awards-section" />
   </v-card>
 </template>
 
@@ -19,17 +16,15 @@ import ExperienceTimeline from "@/components/ExperienceTimeline.vue";
 import HkoExperienceCard from "@/components/HkoExperienceCard.vue";
 import HungHingExperienceCard from "@/components/HungHingExperienceCard.vue";
 import CuhkExperienceCard from "@/components/CuhkExperienceCard.vue";
-import AwardsCard from "@/components/AwardsCard.vue";
 
 export default {
-  name: "ExperienceSection",
+  name: "ExperiencesSection",
 
   components: {
     ExperienceTimeline,
     HkoExperienceCard,
     HungHingExperienceCard,
     CuhkExperienceCard,
-    AwardsCard,
   },
 };
 </script>

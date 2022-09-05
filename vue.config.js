@@ -10,5 +10,8 @@ module.exports = defineConfig({
       entry: 'src/main.js',
       title: 'Johnson\'s Portfolio',
     },
+  },
+  configureWebpack: {
+    devtool: 'source-map'
   }
 })

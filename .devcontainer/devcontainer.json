@@ -23,6 +23,7 @@
 		"eamodio.gitlens",
 		"donjayamanne.githistory",
 		"cschleiden.vscode-github-actions",
+		"vector-of-bool.gitflow",
 		"oderwat.indent-rainbow",
 		"usernamehw.errorlens",
 		"esbenp.prettier-vscode",
@@ -31,7 +32,8 @@
 		"davidanson.vscode-markdownlint",
 		"gruntfuggly.todo-tree",
 		"ms-azuretools.vscode-docker",
-		"GitHub.copilot"
+		"GitHub.copilot",
+		"firefox-devtools.vscode-firefox-debug"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

@@ -79,6 +79,11 @@ export default {
                 id: 202,
                 name: "fastapi",
               },
+              {
+                id: 203,
+                name: "tensorflow",
+                icon: "mdi-robot",
+              },
             ],
           },
           {

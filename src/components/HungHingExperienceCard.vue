@@ -52,13 +52,16 @@
         <v-chip class="ma-1" color="primary">Andoid</v-chip>
         <v-chip class="ma-1" color="secondary">iOS</v-chip>
         <v-chip class="ma-1" color="secondary">Websites</v-chip>
+        <v-chip class="ma-1" color="primary">IoT</v-chip>
       </p>
 
       <p>
         <v-chip class="ma-1" color="primary">Java</v-chip>
         <v-chip class="ma-1" color="secondary">PHP</v-chip>
         <v-chip class="ma-1" color="secondary">Objective-C</v-chip>
-        <v-chip class="ma-1" color="primary">Oracle Database</v-chip>
+        <v-chip class="ma-1" color="primary"><v-icon left> mdi-database </v-icon>Oracle Database</v-chip>
+        <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>MySQL</v-chip>
+        <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>PostgreSQL</v-chip>
       </p>
 
       <span class="font-weight-bold">Highlighted Projects</span>

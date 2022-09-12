@@ -42,8 +42,9 @@
       </p>
       <p>
         <v-chip class="ma-1" color="primary">AI</v-chip>
-        <v-chip class="ma-1" color="primary">image classification</v-chip>
-        <v-chip class="ma-1" color="primary">image segmentation</v-chip>
+        <v-chip class="ma-1" color="primary">Image Classification</v-chip>
+        <v-chip class="ma-1" color="primary">Image Segmentation</v-chip>
+        <v-chip class="ma-1" color="primary">GIS</v-chip>
       </p>
 
       <p>
@@ -51,7 +52,8 @@
         <v-chip class="ma-1" color="primary">VueJS</v-chip>
         <v-chip class="ma-1" color="secondary">Ansible</v-chip>
         <v-chip class="ma-1" color="secondary">Golang</v-chip>
-        <v-chip class="ma-1" color="secondary">MinIO</v-chip>
+        <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>MinIO</v-chip>
+        <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>PostgreSQL</v-chip>
       </p>
 
 

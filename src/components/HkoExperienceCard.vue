@@ -52,8 +52,8 @@
         <v-chip class="ma-1" color="primary">VueJS</v-chip>
         <v-chip class="ma-1" color="secondary">Ansible</v-chip>
         <v-chip class="ma-1" color="secondary">Golang</v-chip>
-        <v-chip class="ma-1" color="secondary">MinIO</v-chip>
-        <v-chip class="ma-1" color="secondary">PostgreSQL</v-chip>
+        <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>MinIO</v-chip>
+        <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>PostgreSQL</v-chip>
       </p>
 
 

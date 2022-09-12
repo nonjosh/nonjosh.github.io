@@ -178,7 +178,7 @@ export default {
         ],
       },
     ],
-    open: [1, 2],
+    open: [2, 3, 4],
     search: null,
     caseSensitive: false,
   }),

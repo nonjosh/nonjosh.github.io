@@ -24,7 +24,7 @@
             Developing new deep learning applications (including full-stacked website developments with VueJS and Python)
           </li>
           <li>
-            Responsible for requirements capture, design, coding, testing, installation, documentation, server setup and maintenance
+            Responsible for requirements capture, system design, UX design, coding, data engineering, model tuning, testing, documentation, server setup and maintenance
           </li>
           <li>
             Communicating with service and hardware provider companies
@@ -45,6 +45,8 @@
         <v-chip class="ma-1" color="primary">Image Classification</v-chip>
         <v-chip class="ma-1" color="primary">Image Segmentation</v-chip>
         <v-chip class="ma-1" color="primary">GIS</v-chip>
+        <v-chip class="ma-1" color="primary">Data Engineering</v-chip>
+        <v-chip class="ma-1" color="secondary">DevOps</v-chip>
       </p>
 
       <p>

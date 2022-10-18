@@ -123,11 +123,10 @@ export default {
       },
       {
         id: 3,
-        title: "Trading bot (In Progress)",
+        title: "Algotrade System (In Progress)",
         description:
-          "This is a bot that I made for trading stocks and crypto currencies.",
-        imgSrc:
-          "https://www.highcharts.com/demo/images/samples/stock/demo/stock-tools-gui/thumbnail.png",
+          "This is a algotrade bot that I am making for portfolio management (stocks, crypto currencies etc).",
+        imgSrc: require("@/assets/img/algotrade-Architecture.drawio.png"),
       },
     ],
   }),

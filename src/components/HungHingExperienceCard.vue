@@ -53,6 +53,8 @@
         <v-chip class="ma-1" color="secondary">iOS</v-chip>
         <v-chip class="ma-1" color="secondary">Websites</v-chip>
         <v-chip class="ma-1" color="primary">IoT</v-chip>
+        <v-chip class="ma-1" color="secondary">ETL</v-chip>
+        <v-chip class="ma-1" color="secondary">AR</v-chip>
       </p>
 
       <p>

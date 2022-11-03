@@ -14,6 +14,11 @@
           />
           <v-card-title> {{ items[0].title }} </v-card-title>
           <v-card-text>
+            <p>
+              <v-chip class="ma-1" color="primary">Telegram Bot</v-chip>
+              <v-chip class="ma-1" color="primary">Web Scraping</v-chip>
+              <v-chip class="ma-1" color="secondary">Python</v-chip>
+            </p>
             <p>This is a bot that I made for subscribing updates in ACGN.</p>
             <p>
               It performs web-scraping on many websites and notices me when
@@ -31,6 +36,11 @@
           />
           <v-card-title> {{ items[1].title }} </v-card-title>
           <v-card-text>
+            <p>
+              <v-chip class="ma-1" color="primary">Boardgame Data Catalog</v-chip>
+              <v-chip class="ma-1" color="secondary">Web Scraping</v-chip>
+              <v-chip class="ma-1" color="secondary">VueJS</v-chip>
+            </p>
             <p>
               This is a webpage that I made for searching the board game (Dragon
               and Dungeon 4.0) rules and other information.
@@ -50,6 +60,11 @@
           />
           <v-card-title> {{ items[2].title }} </v-card-title>
           <v-card-text>
+            <p>
+              <v-chip class="ma-1" color="primary">Online Boardgame</v-chip>
+              <v-chip class="ma-1" color="primary">Live Chat</v-chip>
+              <v-chip class="ma-1" color="secondary">VueJS</v-chip>
+            </p>
             <p>
               This is a webpage that I made for playing the board game (Dragon
               and Dungeon 4.0) with friends.
@@ -71,8 +86,12 @@
           <v-card-title> {{ items[3].title }} </v-card-title>
           <v-card-text>
             <p>
-              This is a bot that I made for trading stocks and crypto
-              currencies.
+              <v-chip class="ma-1" color="primary">Algotrade</v-chip>
+              <v-chip class="ma-1" color="primary">ETL</v-chip>
+              <v-chip class="ma-1" color="secondary">Python</v-chip>
+            </p>
+            <p>
+              It is an algotrade system for portfolio management. It can get historical and real-time data from different sources, and perform backtesting and live trading. (HK stock market, US stock market, and crypto market)
             </p>
           </v-card-text>
         </v-card>

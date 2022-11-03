@@ -82,7 +82,7 @@ export default {
       },
       {
         id: 2,
-        title: "DnD4e Online (In Progress)",
+        title: "DnD4e Online (In Progress🚧)",
         imgSrc: require("@/assets/img/dnd-online_screenshot.png"),
         badges: [
           { desc: "Online Boardgame", color: "primary" },
@@ -96,7 +96,7 @@ export default {
       },
       {
         id: 3,
-        title: "Algotrade System (In Progress)",
+        title: "Algotrade System (In Progress🚧)",
         imgSrc: require("@/assets/img/algotrade-Architecture.drawio.png"),
         badges: [
           { desc: "Algotrade", color: "primary" },

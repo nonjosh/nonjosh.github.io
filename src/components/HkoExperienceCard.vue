@@ -18,13 +18,18 @@
 
     <v-card-text>
       <!-- Display job description -->
+      <span class="font-weight-bold">Achievement</span>
+
+      <p>Deployed an AI platform for colleagues among several teams to use, for analyzing and visualizing weather impact data.</p>
+
+      <span class="font-weight-bold">Duties</span>
       <p >
         <ul>
           <li>
             Developing new deep learning applications (including full-stacked website developments with VueJS and Python)
           </li>
           <li>
-            Responsible for requirements capture, system design, UX design, coding, data engineering, model tuning, testing, documentation, server setup and maintenance
+            Responsible for requirements capture, system design, full-stack development, data engineering, model tuning, testing, documentation, server setup and maintenance
           </li>
           <li>
             Communicating with service and hardware provider companies
@@ -40,6 +45,8 @@
           </li>
         </ul>
       </p>
+      
+      <!-- Technologies/SKills used -->
       <p>
         <v-chip class="ma-1" color="primary">AI</v-chip>
         <v-chip class="ma-1" color="primary">Image Classification</v-chip>

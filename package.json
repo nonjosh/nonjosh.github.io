@@ -1,6 +1,6 @@
 {
   "name": "nonjosh-portfolio",
-  "version": "0.1.0",
+  "version": "2022.11.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -18,6 +18,11 @@
 
     <v-card-text>
       <!-- Display job description -->
+      <span class="font-weight-bold">Achievement</span>
+
+      <p>Deployed an IoT system in multiple factories among Hong Kong and Mainland China, which can serve over hundred of machines.</p>
+
+      <span class="font-weight-bold">Duties</span>
       <p>
         <ul>
           <li>
@@ -29,8 +34,8 @@
             factory workers, office colleagues and customers.
           </li>
           <li>
-            Responsible for requirements capture, design, coding, testing,
-            installation.
+            Responsible for requirements capture, system design, data transformation, full-stack development, 
+            testing, documentation, server setup and maintenance.
           </li>
           <li>
             Acting as a bridge between colleagues and vendors for outsourced
@@ -48,6 +53,7 @@
         <v-chip color="warning">2019 HKICT Gold Award</v-chip>
       </p>
 
+      <!-- Technologies/SKills used -->
       <p>
         <v-chip class="ma-1" color="primary">Andoid</v-chip>
         <v-chip class="ma-1" color="secondary">iOS</v-chip>
@@ -64,6 +70,7 @@
         <v-chip class="ma-1" color="primary"><v-icon left> mdi-database </v-icon>Oracle Database</v-chip>
         <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>MySQL</v-chip>
         <v-chip class="ma-1" color="secondary"><v-icon left> mdi-database </v-icon>PostgreSQL</v-chip>
+        <v-chip class="ma-1" color="secondary">PowerBI</v-chip>
       </p>
 
       <span class="font-weight-bold">Highlighted Projects</span>

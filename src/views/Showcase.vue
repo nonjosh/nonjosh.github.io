@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="pt-5 showcase-section">
+  <v-card outlined class="py-5">
     <center>
       <h1 class="py-10"><u>My Personal Projects</u></h1>
     </center>
@@ -140,9 +140,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.showcase-section {
-  height: 180vh;
-}
-</style>

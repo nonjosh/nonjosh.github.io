@@ -5,29 +5,7 @@
     </center>
     <v-row>
       <v-col v-for="item in items" :key="item.id" cols="12" lg="6">
-        <v-card outlined @click="showPreview(item.imgSrc)">
-          <v-img
-            :src="item.imgSrc"
-            class="ma-5 d-none d-md-block"
-            aspect-ratio="1.7"
-          />
-          <v-card-title> {{ item.title }} </v-card-title>
-          <v-card-text>
-            <p v-if="item.badges">
-              <v-chip
-                v-for="badge in item.badges"
-                :key="badge.id"
-                class="ma-1"
-                :color="badge.color"
-              >
-                {{ badge.desc }}
-              </v-chip>
-            </p>
-            <p v-for="desc in item.desc" :key="desc">
-              {{ desc }}
-            </p>
-          </v-card-text>
-        </v-card>
+        <ShowcaseCard :item="item" @showPreview="showPreview" />
       </v-col>
 
       <v-overlay :z-index="zIndex" :value="overlay">
@@ -44,8 +22,14 @@
 </template>
 
 <script>
+import ShowcaseCard from "@/components/ShowcaseCard.vue";
+
 export default {
   name: "ShowcaseSection",
+
+  components: {
+    ShowcaseCard,
+  },
 
   data: () => ({
     overlay: false,

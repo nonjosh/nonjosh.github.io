@@ -7,7 +7,7 @@
           <v-icon left>mdi-medal</v-icon>{{ awardItem.title }}
         </h2>
         <span v-if="awardItem.reference" class="my-10">
-          <a :href="awardItem.Reference" target="_blank">Reference</a>
+          <a :href="awardItem.reference" target="_blank">Reference</a>
           <font v-if="awardItem.page"> (P. {{ awardItem.page }})</font>
         </span>
       </v-card-text>

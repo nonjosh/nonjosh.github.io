@@ -18,6 +18,7 @@
       <CuhkExperienceCard v-if="item.id == 0" />
       <HungHingExperienceCard v-if="item.id == 1" />
       <HkoExperienceCard v-if="item.id == 2" />
+      <AppleExperienceCard v-if="item.id == 3" />
     </v-timeline-item>
   </v-timeline>
 </template>
@@ -26,11 +27,12 @@
 import CuhkExperienceCard from "@/components/CuhkExperienceCard.vue";
 import HungHingExperienceCard from "@/components/HungHingExperienceCard";
 import HkoExperienceCard from "@/components/HkoExperienceCard";
+import AppleExperienceCard from "@/components/AppleExperienceCard";
 
 export default {
   name: "ExperienceTimeline",
 
-  components: { CuhkExperienceCard, HungHingExperienceCard, HkoExperienceCard },
+  components: { CuhkExperienceCard, HungHingExperienceCard, HkoExperienceCard, AppleExperienceCard },
   data: () => ({
     items: [
       {
@@ -63,6 +65,17 @@ export default {
         description:
           "Developing new deep learning applications (including full-stacked website developments)",
       },
+      {
+        id: 3,
+        color: "grey",
+        icon: "mdi-briefcase",
+        period: "2023/2 - Present",
+        title: "Software Development Engineer II (Contract)",
+        location: "Apple Inc.",
+        companyDescription: "",
+        description:
+          "Siri pipeline monitoring team.",
+      }
     ],
   }),
 };

@@ -3,15 +3,21 @@ on:
   push:
     branches: [ master ]
 jobs:
-  build_vue:
+  publish:
     runs-on: ubuntu-latest
-    name: Build Vue
     steps:
-    - uses: actions/checkout@v2
-    - id: Build-Vue
-      uses: hotrungnhan/VuePagesAction@1.0.1
-      with:
-        username: 'nonjosh'
-        reponame: 'nonjosh.github.io'
-        token: ${{ secrets.GITHUB_TOKEN }}
-
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: yarn install
+      - run: yarn build
+      -
+        name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

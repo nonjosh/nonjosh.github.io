@@ -25,8 +25,7 @@ export default {
         title:
           "2019 Hong Kong ICT Awards: Smart Business - Gold Award Smart Planning",
         reference:
-          "https://www.hkictawards.hk/doc_2019/booklet/General_Award_Programme_2019.pdf",
-        page: 31,
+          "https://www.hkcs.org.hk/wp-content/uploads/Publication/Press_Release/190404_HKICT-Awards-2019-Press-Release-English-version_v3.pdf"
       },
       {
         id: 1,

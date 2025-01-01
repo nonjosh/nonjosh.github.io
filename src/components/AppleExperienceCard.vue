@@ -20,22 +20,25 @@
       <!-- Display job description -->
 
       <span class="font-weight-bold">Duties</span>
-      <p >
+      <p>
         <ul>
-          <li>
-            Siri pipeline monitoring team.
-          </li>
+          <li>Join the pipeline monitoring team for developing triaging intelligence solutions to support global Siri QE teams</li>
+          <li>Responsible for system design, development in backend, databases, cloud architecture,data engineering, infrastructure, CI/CD, etc.</li>
+          <li>Technical Lead for development in several modules</li>
+          <li>Provide trainings and mentor developers across multiple countries</li>
         </ul>
       </p>
       
       <!-- Technologies/SKills used -->
       <p>
+        <v-chip class="ma-1" color="primary">System Design</v-chip>
         <v-chip class="ma-1" color="primary">CI/CD</v-chip>
         <v-chip class="ma-1" color="secondary">DevOps</v-chip>
       </p>
 
       <p>
         <v-chip class="ma-1" color="primary">Python</v-chip>
+        <v-chip class="ma-1" color="primary">Pulumi</v-chip>
         <v-chip class="ma-1" color="secondary">Swift</v-chip>
         <v-chip class="ma-1" color="primary"><v-icon left> mdi-database </v-icon>PostgreSQL</v-chip>
         <v-chip class="ma-1" color="primary"><v-icon left> mdi-cloud </v-icon>GCP</v-chip>

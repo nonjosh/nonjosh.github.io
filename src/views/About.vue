@@ -55,7 +55,7 @@ export default {
     emailUrl: "mailto:nonjosh@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/nonjosh/",
     githubUrl: "https://github.com/nonjosh",
-    cvFilePath: "WongChongSangJohnson_20221103.pdf",
+    cvFilePath: "WongChongSangJohnson_202412.pdf",
   }),
   computed: {
     cssProps() {

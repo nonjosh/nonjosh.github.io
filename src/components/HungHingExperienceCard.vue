@@ -55,6 +55,7 @@
 
       <!-- Technologies/SKills used -->
       <p>
+        <v-chip class="ma-1" color="primary">System Design</v-chip>
         <v-chip class="ma-1" color="primary">Andoid</v-chip>
         <v-chip class="ma-1" color="secondary">iOS</v-chip>
         <v-chip class="ma-1" color="secondary">Websites</v-chip>

@@ -52,6 +52,7 @@
         <v-chip class="ma-1" color="primary">Image Classification</v-chip>
         <v-chip class="ma-1" color="primary">Image Segmentation</v-chip>
         <v-chip class="ma-1" color="primary">GIS</v-chip>
+        <v-chip class="ma-1" color="primary">System Design</v-chip>
         <v-chip class="ma-1" color="primary">Data Engineering</v-chip>
         <v-chip class="ma-1" color="secondary">DevOps</v-chip>
       </p>
@@ -74,7 +75,7 @@
           <v-expansion-panel-content>
             <p>Setup a platform for weather impact analytics</p>
             <ul>
-              <li>Developed a system for analyzing different impact of weather</li>
+              <li>Led team to develop AI applications to help forecasting teams analyze and visualize weather impact data (models used: Dual Path Network, VGG-16 + U-net)</li>
               <li>Developed a webpage for visualizing the model results and raw data (with Vue JS)</li>
               <li>Setup GPU workstations and development environments for colleagues’ AI projects</li>
               <li>Communicated with vendors to setup clusters of GPU servers and database servers in HKO main server room</li>
